@@ -8,6 +8,10 @@ class Product(models.Model):
     description = models.TextField(default='', blank=True,null=True )
     image=models.ImageField(upload_to='uploads/products/', height_field=None, width_field=None, max_length=None)
     
+    
+    @staticmethod
+    def get_products_by_id(ids):
+        return Product.objects.filter(id__in = ids )
 
 
     @staticmethod
@@ -22,3 +26,5 @@ class Product(models.Model):
         else:
             return Product.get_all_products()
             return Product.objects.all()
+        
+        

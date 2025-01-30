@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
+SECURE_SSL_REDIRECT = False
+
 
 from pathlib import Path
 import os
@@ -26,7 +28,7 @@ SECRET_KEY = 'django-insecure-*0p&q*osdzow!#^i482div-+5uyj4^cy8#ml32c!5d^-b3d9bx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition

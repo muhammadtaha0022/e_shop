@@ -10,7 +10,7 @@
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-      <a class="navbar-brand" href="#">E-SHOP</a>
+      <a class="navbar-brand" href="/">E-SHOP</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
@@ -41,10 +41,18 @@
 
           <!-- Right-aligned Buttons -->
           <div class="d-flex">
-              <a href="#" class="btn btn-outline-primary me-2">Orders</a>
-              <a href="#" class="btn btn-outline-secondary me-2">Cart</a>
+                {% if  request.session.customer %}
+              <a href="/orders" class="btn btn-outline-primary me-2">Orders</a>
+              
+              <a href="/logout" class="btn btn-outline-secondary me-2">logout</a>
+              <a href="/cart" class="btn btn-outline-secondary me-2">Cart
+                <span style="color:blue" class="badge badge-info">{{request.session.cart.keys|length}}</span>
+              </a>
+              {% else %}
+              <a href="/cart" class="btn btn-outline-secondary me-2">Cart</a>
               <a href="/signup" class="btn btn-outline-success me-2">Signup</a>
               <a href="/login" class="btn btn-outline-danger">Login</a>
+              {% endif %}
           </div>
       </div>
   </div>
