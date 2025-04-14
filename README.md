@@ -61,3 +61,13 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
+## 📞 Contact Information 
+
+### Direct Contacts 
+- **Mobile:** [+92 301 0224443](tel:+923010224443)
+- **WhatsApp:** [+92 301 0224443](https://wa.me/923010224443)
+- **Email:** [muhammadtaha00224443@gmail.com](mailto:muhammadtaha00224443@gmail.com)
+
+### Professional Profiles
+- **LinkedIn:** [Muhammad Taha](https://www.linkedin.com/in/muhammad-taha-taha)
+- **GitHub:** [muhammadtaha0022](https://github.com/muhammadtaha0022)
